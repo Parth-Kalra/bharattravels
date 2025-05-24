@@ -247,7 +247,38 @@
             color: var(--text-primary);
         }
 
-
+        @media (max-width: 767px) {
+            nav .logo-img {
+                height: 48px;
+            }
+            #desktopNavLinks {
+                display: none !important;
+            }
+            #mobileMenuBtn {
+                display: flex !important;
+            }
+        }
+        @media (min-width: 768px) {
+            #mobileMenuBtn, #mobileNavMenu {
+                display: none !important;
+            }
+            #desktopNavLinks {
+                display: flex !important;
+            }
+        }
+        #mobileNavMenu {
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        #mobileNavMenu.translate-y-0 {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #mobileNavMenu.-translate-y-full {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="bg-bg-light text-text-primary scroll-smooth">
@@ -258,12 +289,24 @@
                 <img src="./Bharat Travels/logo1.jpg" alt="Bharat Travels Logo" class="logo-img" onerror="this.style.display='none'; document.getElementById('navTextLogo').style.display='block';">
                 <span id="navTextLogo" class="text-2xl nav-text-logo" style="display:none;">Bharat Travels</span>
             </a>
-            <div class="space-x-5 md:space-x-7">
+            <button id="mobileMenuBtn" class="md:hidden flex items-center px-3 py-2 border rounded text-primary-color border-primary-color focus:outline-none" aria-label="Open Menu">
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+            <div id="desktopNavLinks" class="hidden md:flex space-x-5 md:space-x-7">
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#fleet" class="nav-link">Our Fleet</a>
                 <a href="#instagram" class="nav-link">Instagram</a>
                 <a href="#about-us" class="nav-link">About Us</a>
                 <a href="#contact" class="nav-button text-sm">Book Now</a>
+            </div>
+        </div>
+        <div id="mobileNavMenu" class="md:hidden fixed top-[70px] left-0 w-full bg-white shadow-lg border-b border-gray-200 z-40 transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none">
+            <div class="flex flex-col space-y-2 py-5 px-6">
+                <a href="#services" class="nav-link py-2">Services</a>
+                <a href="#fleet" class="nav-link py-2">Our Fleet</a>
+                <a href="#instagram" class="nav-link py-2">Instagram</a>
+                <a href="#about-us" class="nav-link py-2">About Us</a>
+                <a href="#contact" class="nav-button text-sm py-2">Book Now</a>
             </div>
         </div>
     </nav>
@@ -520,6 +563,29 @@
                 images[current].classList.add('active');
             }, 3500);
         })();
+
+        // Mobile menu toggle logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNavMenu = document.getElementById('mobileNavMenu');
+        let mobileMenuOpen = false;
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuOpen = !mobileMenuOpen;
+            if (mobileMenuOpen) {
+                mobileNavMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileNavMenu.classList.add('translate-y-0', 'opacity-100');
+            } else {
+                mobileNavMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileNavMenu.classList.remove('translate-y-0', 'opacity-100');
+            }
+        });
+        // Close mobile menu on link click
+        mobileNavMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOpen = false;
+                mobileNavMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileNavMenu.classList.remove('translate-y-0', 'opacity-100');
+            });
+        });
     </script>
 
 </body>
