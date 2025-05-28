@@ -390,6 +390,49 @@
         }
     </style>
     <style>
+        .hero-overlay {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 70px);
+            background: rgba(0,0,0,0.25);
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-title {
+            color: #fff !important;
+            text-shadow: 0 4px 32px rgba(0,0,0,0.85), 0 2px 8px rgba(0,0,0,0.65);
+            letter-spacing: 0.01em;
+            padding: 0.5rem 1rem;
+        }
+        .hero-subtitle, .hero-desc {
+            color: #fff !important;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5);
+            padding: 0.25rem 0.5rem;
+        }
+        .hero-content {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (max-width: 767px) {
+            .hero-title {
+                font-size: 2.2rem !important;
+                padding: 0.25rem 0.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.1rem !important;
+            }
+            .hero-desc {
+                font-size: 1rem !important;
+            }
+        }
+    </style>
+    <style>
         /* Show Call Now button only on mobile, hide on desktop */
         #callNowBtn {
             display: flex !important;
@@ -483,11 +526,19 @@
             <img src="Bharat Travels/carou/V1.jpg" alt="Hero Slide 12">
             <img src="Bharat Travels/carou/V2.jpg" alt="Hero Slide 13">
         </div>
+        <!-- Overlay for better text readability -->
+        <div class="hero-overlay"></div>
         <div class="container mx-auto px-6 text-center hero-content">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-5 leading-tight hero-text-primary" style="color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.45);">Bharat Travels</h1>
-            <p class="text-lg md:text-xl mb-4 font-normal hero-text-secondary" style="color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.45);">Reliable Rides, Unforgettable Journeys, Your Premier Car Rental in Ahmedabad & Vadodara</p>
-            <p class="text-md md:text-lg mb-10 font-normal hero-text-secondary" style="color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.45);">Cars for     Business, Travel, Weddings, & Events</p>
-            <a href="#contact" class="btn-primary text-lg group"> Get a Quote Today <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+            <h1 class="text-6xl md:text-7xl font-extrabold mb-7 leading-tight hero-text-primary hero-title">
+                Bharat Travels
+            </h1>
+            <p class="text-2xl md:text-3xl mb-5 font-semibold hero-text-secondary hero-subtitle">
+                Reliable Rides, Unforgettable Journeys, Your Premier Car Rental in Ahmedabad & Vadodara
+            </p>
+            <p class="text-lg md:text-xl mb-12 font-medium hero-text-secondary hero-desc">
+                Cars for Business, Travel, Weddings, & Events
+            </p>
+            <a href="#contact" class="btn-primary text-xl group"> Get a Quote Today <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
             </a>
         </div>
     </header>
