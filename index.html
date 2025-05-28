@@ -6,7 +6,7 @@
     <title>Bharat Travels - Ahmedabad & Vadodara Modern Car Rentals</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
         body {
@@ -768,6 +768,9 @@
         box-shadow: 0 4px 24px rgba(0,0,0,0.07);
         padding: 2rem 1rem;
         border-radius: 1rem;
+        width: 95%;
+        max-width: 420px;
+        margin: 0 auto;
     }
     .contact-link {
         font-size: clamp(1.1rem, 4vw, 1.7rem);
@@ -859,6 +862,28 @@
             padding: 0.5em !important;
         }
     }
+/* Enhanced Contact Icons - Orange Theme */
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.12);
+    color: #fff !important;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.contact-link:hover .contact-icon {
+    transform: scale(1.08) rotate(-6deg);
+    box-shadow: 0 8px 24px rgba(255, 152, 0, 0.18);
+    background: linear-gradient(135deg, #f57c00 0%, #ffe0b2 100%);
+}
+.contact-icon .material-icons {
+    color: #fff !important;
+    font-size: 32px !important;
+}
 </style>
 <section id="contact-us" class="py-16 md:py-20 section-bg-offset rounded-xl">
             <div class="container mx-auto px-6">
@@ -870,25 +895,30 @@
                     <div class="text-center text-gray-700 space-y-4">
                         
                             <a href="tel:+919723455844" class="contact-link flex items-center gap-3 text-2xl font-bold text-primary-color hover:text-blue-700 transition">
-                                <span class="contact-icon p-3 rounded-full shadow">
-                                    <!-- Heroicons Phone Outline -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
-                                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0-2.071 1.679-3.75 3.75-3.75h1.5c.414 0 .75.336.75.75v3c0 .414-.336.75-.75.75H6.75A.75.75 0 0 0 6 8.25v1.5c0 5.385 4.365 9.75 9.75 9.75h1.5a.75.75 0 0 0 .75-.75v-1.5c0-.414.336-.75.75-.75h3c.414 0 .75.336.75.75v1.5c0 2.071-1.679 3.75-3.75 3.75h-1.5C7.678 21 2.25 15.572 2.25 8.25v-1.5z"/>
-                                    </svg>
+                                <span class="contact-icon">
+                                    <span class="material-icons">
+                                      phone
+                                    </span>
                                 </span>
                                 +91 97234 55844
                             </a>
                             <a href="mailto:bharat_travels@hotmail.com" class="contact-link flex items-center gap-3 text-2xl font-bold text-primary-color hover:text-blue-700 transition">
-                                <span class="contact-icon p-3 rounded-full shadow">
-                                    <!-- Heroicons Envelope Outline -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
-                                      <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15A2.25 2.25 0 0 0 2.25 6.75m19.5 0-9.75 7.5-9.75-7.5" />
-                                    </svg>
+                                <span class="contact-icon">
+                                    <span class="material-icons">
+                                      mail
+                                    </span>
                                 </span>
                                 bharat_travels@hotmail.com
                             </a>
                         
-                        <p><i class="fas fa-map-marker-alt icon-primary mr-2"></i>B/2, A.V Complex, Jain Merchant, Paldi, Ahmedabad, Gujarat, India 380007</p>
+                        <p class="contact-link" style="font-size: 1.25rem;">
+                          <span class="contact-icon">
+                            <span class="material-icons">
+                              location_on
+                            </span>
+                          </span>
+                          B/2, A.V Complex, Jain Merchant, Paldi, Ahmedabad, Gujarat, India 380007
+                        </p>
                         <div class="mt-6">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.728077457133!2d72.561749!3d23.0097433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e850687005657:0xe37283fb09ea341c!2sBharat%20Travels!5e0!3m2!1sen!2sin!4v1716913100000!5m2!1sen!2sin"
