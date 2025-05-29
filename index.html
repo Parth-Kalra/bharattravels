@@ -9,6 +9,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
+        .scaled-iframe {
+            transform: scale(1.0);
+            transform-origin: top left;
+            overflow:visible;
+            padding-bottom: 70.25%; /* Adjust padding to maintain aspect ratio */
+        }
+
+        .scaled-iframe iframe {
+            width: 100% !important;
+            height: 100% !important;
+        }
         body {
             font-family: 'Inter', sans-serif;
             /* Vibrant Orange Theme */
@@ -737,8 +748,8 @@
                 <p class="section-subtitle text-center mb-12 md:mb-16">Fill out the form for enquiries, or contact us directly. We serve Ahmedabad, Vadodara, and beyond.</p>
                 <div class="max-w-2xl mx-auto contact-form-bg p-8 md:p-10 rounded-xl shadow-xl">
                     <h3 class="text-2xl font-semibold mb-8 text-text-primary text-center">Send Your Enquiry</h3>
-                    <div class="responsive-iframe-container">
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6ckA7jtSDJCcwHFC7OrbUD5a7G1Aa5tvVGSFmLDJ0r2yqWw/viewform?embedded=true" width="640" height="554" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <div class="responsive-iframe-container scaled-iframe">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6ckA7jtSDJCcwHFC7OrbUD5a7G1Aa5tvVGSFmLDJ0r2yqWw/viewform?embedded=true" width="100%" height="1200px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                     </div>
                 </div>
             </section>
