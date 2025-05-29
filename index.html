@@ -981,39 +981,7 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const fileInput = document.getElementById('fileInput');
-            const uploadButton = document.getElementById('uploadButton');
-            const uploadStatus = document.getElementById('uploadStatus');
-
-            uploadButton.addEventListener('click', function() {
-                const file = fileInput.files[0];
-                if (!file) {
-                    uploadStatus.textContent = 'Please select a file.';
-                    return;
-                }
-
-                const formData = new FormData();
-                formData.append('file', file);
-
-                uploadStatus.textContent = 'Uploading...';
-
-                fetch('/upload', { // Replace '/upload' with your server endpoint
-                    method: 'POST',
-                    body: formData,
-                })
-                .then(response => {
-                    if (response.ok) {
-                        uploadStatus.textContent = 'File uploaded successfully!';
-                    } else {
-                        uploadStatus.textContent = 'File upload failed.';
-                    }
-                })
-                .catch(error => {
-                    uploadStatus.textContent = 'An error occurred: ' + error;
-                });
-            });
-        });
+        
     </script>
 
     <footer class="footer-bg text-gray-400 py-12 md:py-16">
