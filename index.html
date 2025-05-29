@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         .scaled-iframe {
@@ -373,23 +374,27 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.9);
+            background-color: var(--primary-color);
             border: none;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             z-index: 10;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
         }
 
         .carousel-button:hover {
-            background: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background-color: var(--primary-hover-color);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+        }
+
+        .carousel-button i {
+            color: white;
         }
 
         .carousel-button.prev {
@@ -741,6 +746,95 @@
                         </div>
                     </div>
                 </div>
+
+<div class="relative py-4">
+    <div class="flex items-center">
+
+        <button id="scroll-left" class="carousel-button prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="overflow-x-hidden flex snap-x snap-mandatory space-x-4 py-2 scroll-smooth" id="image-container">
+            <!-- Images will be added here -->
+            <img src="Bharat Travels/Collage/BT Image 1.png" alt="BT Image 1" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 3.png" alt="BT Image 3" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 4.png" alt="BT Image 4" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 5.png" alt="BT Image 5" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 6.png" alt="BT Image 6" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 7.png" alt="BT Image 7" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 8.png" alt="BT Image 8" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 10.png" alt="BT Image 10" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 11 (1).png" alt="BT Image 11 (1)" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 11 (2).png" alt="BT Image 11 (2)" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 11 (3).png" alt="BT Image 11 (3)" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 11 (4).png" alt="BT Image 11 (4)" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 11 (5).png" alt="BT Image 11 (5)" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 12.png" alt="BT Image 12" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 13.png" alt="BT Image 13" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 15.png" alt="BT Image 15" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 16.png" alt="BT Image 16" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 17.png" alt="BT Image 17" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 18.png" alt="BT Image 18" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 19.png" alt="BT Image 19" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 22.png" alt="BT Image 22" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 23.png" alt="BT Image 23" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 24.png" alt="BT Image 24" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 25.png" alt="BT Image 25" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 26.png" alt="BT Image 26" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 27.png" alt="BT Image 27" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 28.png" alt="BT Image 28" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 29.png" alt="BT Image 29" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 30.png" alt="BT Image 30" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 31.png" alt="BT Image 31" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 32.png" alt="BT Image 32" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 33.png" alt="BT Image 33" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 34.webp" alt="BT Image 34" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 35.webp" alt="BT Image 35" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 36.webp" alt="BT Image 36" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 37.webp" alt="BT Image 37" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 38.webp" alt="BT Image 38" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 39.webp" alt="BT Image 39" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 40 (1).webp" alt="BT Image 40 (1)" class="snap-start w-64 h-64 object-cover rounded-md" />
+            <img src="Bharat Travels/Collage/BT Image 41.png" alt="BT Image 41" class="snap-start w-64 h-64 object-cover rounded-md" />
+        </div>
+        <button id="scroll-right" class="carousel-button next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+
+<script>
+    function autoScrollCarousel() {
+        const container = document.getElementById('image-container');
+        const firstItem = container.children[0];
+        const itemWidth = firstItem.offsetWidth + 16; // Including space-x-4
+
+        container.scrollLeft += itemWidth;
+
+        // If we've reached the end, scroll back to the beginning
+        if (container.scrollLeft >= (container.scrollWidth - container.offsetWidth)) {
+            container.scrollLeft = 0;
+        }
+    }
+
+    setInterval(autoScrollCarousel, 3000); // Change slide every 3 seconds
+
+    // Add event listeners to the scroll buttons
+    document.getElementById('scroll-left').addEventListener('click', () => {
+        const container = document.getElementById('image-container');
+        const firstItem = container.children[0];
+        const itemWidth = firstItem.offsetWidth + 16;
+        container.scrollLeft -= itemWidth;
+    });
+
+    document.getElementById('scroll-right').addEventListener('click', () => {
+        const container = document.getElementById('image-container');
+        const firstItem = container.children[0];
+        const itemWidth = firstItem.offsetWidth + 16;
+        container.scrollLeft += itemWidth;
+    });
+</script>
+    
+</script>
             </section>
 
             <section id="contact" class="py-16 md:py-20 px-4">
