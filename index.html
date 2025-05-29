@@ -412,6 +412,17 @@
         }
     </style>
     <style>
+        @keyframes glow-effect {
+            0% {
+                text-shadow: 0 0 12px rgba(255,255,255,0.85), 0 2px 8px rgba(0,0,0,0.75);
+            }
+            50% {
+                text-shadow: 0 0 12px rgba(249, 115, 22, 0.85), 0 2px 8px rgba(0,0,0,0.75);
+            }
+            100% {
+                text-shadow: 0 0 12px rgba(255,255,255,0.85), 0 2px 8px rgba(0,0,0,0.75);
+            }
+        }
         .responsive-iframe-container {
             position: relative;
             overflow: hidden;
@@ -444,18 +455,20 @@
         }
         .hero-title {
             color: #fff !important;
-            text-shadow: 0 4px 32px rgba(0,0,0,0.85), 0 2px 8px rgba(0,0,0,0.65);
+            text-shadow: 0 0 12px rgba(255,255,255,0.85), 0 2px 8px rgba(0,0,0,0.75);
             letter-spacing: 0.01em;
             padding: 0.5rem 1rem;
+            animation: glow-effect 5s infinite alternate;
         }
         .hero-subtitle, .hero-desc {
             color: #fff !important;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5);
+            text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 1px 4px rgba(0,0,0,0.6);
             padding: 0.25rem 0.5rem;
+            animation: glow-effect 5s infinite alternate;
         }
         .hero-content {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
         @media (max-width: 767px) {
             .hero-title {
@@ -571,17 +584,22 @@
         </div>
         <!-- Overlay for better text readability -->
         <div class="hero-overlay"></div>
-        <div class="container mx-auto px-6 text-center hero-content">
-            <h1 class="text-6xl md:text-7xl font-extrabold mb-7 leading-tight hero-text-primary hero-title">
+        <div class="container mx-auto px-6 text-center hero-content flex flex-col items-center justify-center">
+            <h1 class="text-6xl md:text-7xl font-extrabold mb-5 leading-tight hero-text-primary hero-title">
                 Bharat Travels
             </h1>
-            <p class="text-2xl md:text-3xl mb-5 font-semibold hero-text-secondary hero-subtitle">
-                Reliable Rides, Unforgettable Journeys, Your Premier Car Rental in Ahmedabad & Vadodara
+            <h2 class="text-2xl md:text-3xl mb-3 font-semibold hero-text-secondary hero-subtitle">
+                Luxury & Reliability, Redefined
+            </h2>
+            <p class="text-lg md:text-xl mb-4 font-medium hero-text-secondary hero-desc">
+                Ahmedabad & Vadodara's Premier Car Rental Service.
             </p>
-            <p class="text-lg md:text-xl mb-12 font-medium hero-text-secondary hero-desc">
-                Cars for Business, Travel, Weddings, & Events
+            <p class="text-lg md:text-xl mb-6 font-medium hero-text-secondary hero-desc">
+                Your trusted partner for corporate, business, wedding, and event transportation since 1984. Experience the modern comfort and impeccable service that defines every Bharat Travels journey across India.
             </p>
-            <a href="#contact" class="btn-primary text-xl group"> Get a Quote Today <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+            <a href="#contact" class="btn-primary text-xl group">
+                Get a Quote Today
+                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
             </a>
         </div>
     </header>
